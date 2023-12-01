@@ -7,14 +7,14 @@ from datetime import datetime
 
 
 video_capture = cv2.VideoCapture(0)
-prem_image = face_recognition.load_image_file("photos/prem.jpeg")
-prem_encoding = face_recognition.face_encodings(prem_image)[0]
+akhila_image = face_recognition.load_image_file("photos/akhila.jpeg")
+akhila_encoding = face_recognition.face_encodings(akhila_image)[0]
 
-rajinikanth_image = face_recognition.load_image_file("photos/rajinikanth.jpg")
-rajinikanth_encoding = face_recognition.face_encodings(rajinikanth_image)[0]
+pragati_image = face_recognition.load_image_file("photos/pragati.jpg")
+pragati_encoding = face_recognition.face_encodings(pragati_image)[0]
 
-known_face_encoding = [prem_encoding,rajinikanth_encoding]
-known_face_names = ["prem","rajinikanth"]
+known_face_encoding = [akhila_encoding,pragati_encoding]
+known_face_names = ["akhila","pragati"]
 
 students = known_face_names.copy()
 
@@ -59,7 +59,7 @@ while True:
 					print(students)
 					current_time = now.strftime("%H-%M-%S")
 					lnwriter.writerow([name,current_time])
-	cv2.imshow("attandance system ",frame)
+	cv2.imshow("attendance system ",frame)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
 
