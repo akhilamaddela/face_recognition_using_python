@@ -7,10 +7,10 @@ from datetime import datetime
 
 
 video_capture = cv2.VideoCapture(0)
-akhila_image = face_recognition.load_image_file("photos/akhila.jpeg")
+akhila_image = face_recognition.load_image_file("C:\Users\vamsh\Downloads\Face_Recognition_Group_B.zip\Photos\akhila.jpeg")
 akhila_encoding = face_recognition.face_encodings(akhila_image)[0]
 
-pragati_image = face_recognition.load_image_file("photos/pragati.jpg")
+pragati_image = face_recognition.load_image_file("C:\Users\vamsh\Downloads\Face_Recognition_Group_B.zip\Photos\pragati.jpeg")
 pragati_encoding = face_recognition.face_encodings(pragati_image)[0]
 
 known_face_encoding = [akhila_encoding,pragati_encoding]
